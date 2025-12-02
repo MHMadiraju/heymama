@@ -239,3 +239,6 @@ volumes:
 docker-compose up -d
 docker ps
 docker exec -it redis_server redis-cli
+
+PS C:\Users\mukun\OneDrive\Documents\docker> docker compose down
+>> docker compose up -d
