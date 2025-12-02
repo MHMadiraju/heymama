@@ -1,0 +1,11 @@
+minikube start --driver=docker
+kubectl create deployment nginx --image=nginx:alpine
+kubectl expose deployment nginx --type=NodePort --port=80
+kubectl scale deployment nginx --replicas=4
+minikube service nginx --url
+
+kubectl create deployment mysql --image=mysql:8
+kubectl set env deployment/mysql MYSQL_ROOT_PASSWORD=root
+kubectl expose deployment mysql --port=3306
+kubectl get pods
+kubectl exec -it <pod-name> -- mysql -u root -proot
