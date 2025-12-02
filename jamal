@@ -140,3 +140,47 @@ Step 2: Create Freestyle Project (e.g., MavenJava_Build)
 └── Credentials: Username: admin, Password: 1234
 ── Tomcat URL: https://localhost:8085/
                 └── Apply and Save
+
+
+
+
+| **Git Command**                        | **Use / Meaning**                  | **Use Case**                         |
+| -------------------------------------- | ---------------------------------- | ------------------------------------ |
+| `git init`                             | Initializes a local Git repository | Start version control for a project  |
+| `git add .`                            | Stage all changed files            | Prepare files for commit             |
+| `git add filename`                     | Stage a specific file              | Add only selected files to commit    |
+| `git reset HEAD filename`              | Unstage a file (keep changes)      | You added a file by mistake          |
+| `git checkout -- filename`             | Discard unstaged changes           | Undo local changes                   |
+| `git commit -m "message"`              | Commit staged changes              | Create a version of your work        |
+| `git commit --amend`                   | Fix last commit message            | Correct wrong commit text            |
+| `git log`                              | Shows commit history               | View past commits                    |
+| `git log --oneline --graph --decorate` | Visual readable commit history     | Understand branches & merges         |
+| `git config --global user.name ""`     | Set global username                | Identity for all repositories        |
+| `git config --global user.email ""`    | Set global email                   | Identity for all repositories        |
+| `git diff`                             | View unstaged changes              | Check what is modified               |
+| `git checkout branchname`              | Switch to a branch                 | Move to feature branch               |
+| `git checkout -b branchname`           | Create + switch to new branch      | Start new feature                    |
+| `git branch -d branchname`             | Delete merged branch               | Cleanup                              |
+| `git branch -D branchname`             | Force delete unmerged branch       | Remove unwanted branch               |
+| `git branch`                           | List local branches                | View available branches              |
+| `git branch -a`                        | List all local + remote branches   | Check remote branches                |
+| `git reflog`                           | Shows branch history               | Recover deleted branch               |
+| `git push`                             | Upload commits                     | Send work to GitHub                  |
+| `git push -u origin main`              | First push (set upstream)          | Connect local & remote branch        |
+| `git fetch`                            | Download changes (no merge)        | Check updates without affecting code |
+| `git pull`                             | Fetch + merge                      | Update branch                        |
+| `git merge branchname`                 | Merge branch into current          | Combine feature branch into main     |
+| `git stash`                            | Save changes temporarily           | Switch branches safely               |
+| `git stash pop`                        | Restore stashed changes            | Get back temporary work              |
+| `git blame filename`                   | Show who edited each line          | Debugging / track changes            |
+| `git rm filename`                      | Remove file & track removal        | Delete an unwanted file              |
+| `git remote -v`                        | Show remotes                       | Check GitHub linked repo             |
+| `git remote add origin url`            | Add remote repository              | Connect project to GitHub            |
+| `git remote remove origin`             | Remove remote link                 | Disconnect GitHub repo               |
+| `git remote rename origin newname`     | Rename remote                      | Change origin name                   |
+| `git remote set-url origin url`        | Change remote URL                  | Update after renaming GitHub repo    |
+| `git branch -r`                        | List remote-only branches          | See branches on GitHub               |
+| `git fetch --prune`                    | Clean deleted remote branches      | Remove outdated remotes              |
+| `git fetch origin branchname`          | Fetch a specific branch            | Download a single branch             |
+| `git remote show origin`               | Detailed remote info               | View remote branch status            |
+| `git pull --rebase origin main`        | Rebase local branch on remote      | Keep linear history                  |
